@@ -27,10 +27,7 @@ jobs:
         run: npm i -g @antfu/ni
 
       - name: Install
-        run: nci
-
-      - name: Echo
-        run: DEBUG="eslint-ts-patch" npx eslint -v
+        run: ni
 
       - name: Build
         run: nr build
