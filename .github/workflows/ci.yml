@@ -29,6 +29,9 @@ jobs:
       - name: Install
         run: nci
 
+      - name: Echo
+        run: DEBUG="eslint-ts-patch" npx eslint -v
+
       - name: Build
         run: nr build
 
