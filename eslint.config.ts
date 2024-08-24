@@ -1,6 +1,3 @@
-import path from 'node:path'
-import process from 'node:process'
-
 import janna from '@jannajs/lint/eslint'
 import starter from 'starter-eslint-plugin'
 import * as tsParser from '@typescript-eslint/parser'
@@ -10,15 +7,16 @@ export default janna({}, {
   files: [GLOB_SRC],
   languageOptions: {
     parser: tsParser,
+    // ref: https://typescript-eslint.io/packages/parser/#configuration
     parserOptions: {
-      project: path.join(process.cwd(), 'tsconfig.json'),
-    },
+      projectService: true,
+    } satisfies tsParser.ParserOptions,
   },
   plugins: {
     starter,
   },
   rules: {
-    'starter/no-loop-over-enum': 'warn',
+    'starter/no-loop-over-enum': ['error'],
   },
   ignores: [
     // TS code block in markdown

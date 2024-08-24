@@ -1,4 +1,4 @@
-# Avoid looping over enums (`e// @ts-expect-error-errorlinting/no-loop-over-enums`)
+# Avoid looping over enums (`no-loop-over-enum`)
 
 💭 This rule requires [type information](https://typescript-eslint.io/linting/typed-linting).
 
@@ -25,12 +25,8 @@ for (const a of values2) {
 ## Invalid
 
 ```ts
-enum Values {
-  Foo = 'foo'
-}
-// eslint-disable-next-line ts/ban-ts-comment
-// @ts-expect-error
-for (const a of Values) {
+enum Values {}
+for (const a in Values) {
   // ...
 }
 ```

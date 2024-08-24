@@ -38,9 +38,11 @@ export default [
 
 ## Rules
 
-### `starter/hello`
+💭 Requires [type information](https://typescript-eslint.io/linting/typed-linting).
 
-Hello world.
+| Name                                                 | Description               | 💭  |
+| :--------------------------------------------------- | :------------------------ | :-- |
+| [no-loop-over-enum](docs/rules/no-loop-over-enum.md) | Avoid looping over enums. | 💭  |
 
 ## Credits
 

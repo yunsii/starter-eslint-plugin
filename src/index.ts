@@ -1,8 +1,11 @@
+import module from 'node:module'
+
 import { rules } from './rules/index.js'
+
+const require = module.createRequire(import.meta.url)
 
 const { name, version }
   // `import`ing here would bypass the TSConfig's `"rootDir": "src"`
-  // eslint-disable-next-line ts/no-require-imports
   = require('../package.json') as typeof import('../package.json')
 
 const plugin = {
