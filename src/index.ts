@@ -1,8 +1,9 @@
-import type { ESLint } from 'eslint'
 import hello from './rules/hello'
+
+import type { ESLint } from 'eslint'
 
 export default {
   rules: {
-    hello,
+    [hello.name]: hello.module,
   },
 } satisfies ESLint.Plugin

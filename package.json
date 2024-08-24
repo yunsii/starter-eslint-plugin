@@ -2,7 +2,7 @@
   "name": "starter-eslint-plugin",
   "type": "module",
   "version": "0.0.0",
-  "packageManager": "pnpm@8.14.1",
+  "packageManager": "pnpm@9.8.0",
   "description": "Starter template for eslint plugin",
   "author": "Yuns <yuns.xie@qq.com>",
   "license": "MIT",
@@ -43,48 +43,44 @@
     "dist"
   ],
   "scripts": {
+    "prepare": "husky install",
     "build": "unbuild",
     "dev": "unbuild --stub",
-    "lint": "eslint .",
     "prepublishOnly": "nr build",
     "release": "bumpp && npm publish",
-    "start": "esno src/index.ts",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
-    "prepare": "husky install",
-    "lint-staged": "lint-staged",
-    "lint-staged:lint": "eslint",
-    "lint:fix": "eslint --fix ."
+    "lint": "eslint --flag unstable_ts_config .",
+    "lint:fix": "eslint --flag unstable_ts_config ."
   },
   "peerDependencies": {
-    "eslint": "^8.40.0"
+    "eslint": "^9.0.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.6.2",
+    "@antfu/eslint-config": "^2.27.1",
     "@antfu/ni": "^0.21.12",
-    "@commitlint/cli": "^18.4.4",
-    "@commitlint/config-conventional": "^18.4.4",
-    "@commitlint/types": "^18.4.4",
-    "@jannajs/lint": "3.0.0-next.3",
-    "@types/eslint": "^8.44.8",
+    "@commitlint/cli": "^19.4.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@commitlint/types": "^19.0.3",
+    "@eslint-react/eslint-plugin": "^1.12.1",
+    "@jannajs/lint": "3.0.0-next.18",
+    "@types/eslint": "^9.6.0",
     "@types/node": "^20.10.3",
-    "bumpp": "^9.2.0",
-    "eslint": "npm:eslint-ts-patch@8.56.0-0",
-    "eslint-plugin-format": "^0.1.0",
-    "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.5",
-    "eslint-ts-patch": "^8.56.0-0",
-    "husky": "^8.0.3",
-    "lint-staged": "^15.2.0",
-    "pnpm": "^8.11.0",
+    "bumpp": "^9.5.2",
+    "eslint": "9.9.1",
+    "eslint-plugin-format": "^0.1.2",
+    "eslint-plugin-react-hooks": "5.1.0-rc-fb9a90fa48-20240614",
+    "eslint-plugin-react-refresh": "^0.4.11",
+    "eslint-vitest-rule-tester": "^0.6.1",
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.9",
     "starter-eslint-plugin": "workspace:*",
     "typescript": "^5.3.2",
     "unbuild": "^2.0.0",
-    "vite": "^5.0.11",
-    "vitest": "^1.2.0"
+    "vite": "^5.4.2",
+    "vitest": "^2.0.5"
   },
   "lint-staged": {
-    "*": "npm run lint-staged:lint"
+    "*": "eslint --flag unstable_ts_config --fix"
   }
 }

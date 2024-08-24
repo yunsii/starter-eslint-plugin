@@ -1,21 +1,24 @@
-import type { Rule } from 'eslint'
+import { defineRule } from 'src/helpers'
 
 let warnedForMissingVersion = false
 
-export default {
-  meta: {
-    type: 'suggestion',
-    docs: {
-      description: 'Hello world',
+export default defineRule({
+  name: 'hello',
+  module: {
+    meta: {
+      type: 'suggestion',
+      docs: {
+        description: 'Hello world',
+      },
+    },
+    create() {
+      if (!warnedForMissingVersion) {
+        console.warn('Warning: eslint plugin starter created')
+        warnedForMissingVersion = true
+      }
+      return {
+        Program() {},
+      }
     },
   },
-  create() {
-    if (!warnedForMissingVersion) {
-      console.warn('Warning: eslint plugin starter created')
-      warnedForMissingVersion = true
-    }
-    return {
-      Program() {},
-    }
-  },
-} satisfies Rule.RuleModule
+})
