@@ -18,7 +18,7 @@ const plugin = {
 
 const recommended = {
   plugins: {
-    'example-typed-linting': plugin,
+    'starter-eslint-plugin': plugin,
   },
   rules,
 }
