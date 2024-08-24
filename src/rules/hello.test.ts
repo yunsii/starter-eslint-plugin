@@ -1,12 +1,12 @@
 import { $, createRuleTester } from 'eslint-vitest-rule-tester'
 import { describe, it } from 'vitest'
 
-import hello from '../src/rules/hello'
+import { rule as hello } from './hello'
 
-describe(hello.name, () => {
+describe('hello', () => {
   const { valid } = createRuleTester({
-    name: hello.name,
-    rule: hello.module,
+    name: 'hello',
+    rule: hello,
   })
 
   it('valid case 1', () => {

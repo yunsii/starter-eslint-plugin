@@ -56,6 +56,9 @@
   "peerDependencies": {
     "eslint": "^9.0.0"
   },
+  "dependencies": {
+    "@typescript-eslint/utils": "^8.2.0"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^2.27.1",
     "@antfu/ni": "^0.21.12",

@@ -1,10 +1,12 @@
-import type { Rule } from 'eslint'
+import { ESLintUtils } from '@typescript-eslint/utils'
 
-export interface DefineRuleOptions {
-  name: string
-  module: Rule.RuleModule
+export interface ExampleTypedLintingRuleDocs {
+  description: string
+  recommended?: boolean
+  requiresTypeChecking?: boolean
 }
 
-export function defineRule(options: DefineRuleOptions) {
-  return options
-}
+export const createRule = ESLintUtils.RuleCreator<ExampleTypedLintingRuleDocs>(
+  (name) =>
+    `https://github.com/yunsii/starter-eslint-plugin/blob/main/docs/rules/${name}.md`,
+)
