@@ -1,4 +1,4 @@
-import { defineRule } from 'src/helpers'
+import { defineRule } from '../helpers'
 
 let warnedForMissingVersion = false
 
