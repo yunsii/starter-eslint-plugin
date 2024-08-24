@@ -30,7 +30,7 @@ export default [
       starter,
     },
     rules: {
-      'starter/hello': 'warn',
+      'starter/no-loop-over-enum': 'warn',
     },
   },
 ]

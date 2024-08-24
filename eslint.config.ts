@@ -20,4 +20,8 @@ export default janna({}, {
   rules: {
     'starter/no-loop-over-enum': 'warn',
   },
+  ignores: [
+    // TS code block in markdown
+    '**/*.md/*.ts',
+  ],
 })
