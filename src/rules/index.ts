@@ -1,5 +1,5 @@
-import { rule as hello } from './hello'
+import { rule as noLoopOverEnum } from './no-loop-over-enum.js'
 
 export const rules = {
-  hello,
+  'no-loop-over-enum': noLoopOverEnum,
 }

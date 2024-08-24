@@ -18,7 +18,7 @@ const plugin = {
 
 const recommended = {
   plugins: {
-    'starter-eslint-plugin': plugin,
+    starter: plugin,
   },
   rules,
 }
