@@ -44,12 +44,6 @@ export default [
 | :--------------------------------------------------- | :------------------------ | :-- |
 | [no-loop-over-enum](docs/rules/no-loop-over-enum.md) | Avoid looping over enums. | 💭  |
 
-## Credits
-
-Thanks to the existing works for references and inspiration.
-
-- [eslint-plugin-format](https://github.com/antfu/eslint-plugin-format)
-
 ## License
 
 [MIT](./LICENSE) License © 2024-PRESENT [Yuns](https://github.com/yunsii)
